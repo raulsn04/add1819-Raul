@@ -1,4 +1,8 @@
 # add1819-Raul
+
+![Imagen](logotipo_ies.png)
+
+
 # Título grande
 
 Este es un texto bla bla bla. Esto es *cursiva* y esto es **negrita**.
@@ -23,4 +27,4 @@ Tenemos las siguientes opciones:
 * Otra
 * última
 
-[]()
+Esto es un enlace al [IES Puerto de la Cruz](https://blog.iespuertodelacruz.es/)
