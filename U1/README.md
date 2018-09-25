@@ -37,7 +37,7 @@ Accedemos al fichero **etc/hostname** y modificamos el nombre del host añadiend
 * Hostname -a
 * Hostname -f
 * Uname -a
-![iamges](5.PNG)
+![images](5.PNG)
 
 * IP a
 * Blkid
