@@ -7,7 +7,7 @@
 ### Configuración de las redes.
 **Primero debemos crear la maquina virtual y añadirle dos interfaces de red, una en modo puente y otra en modo red interna, para ello vamos a los ajustes y procedemos a añadir las interfaces.**
 ### Red Normal
-[[images](1.PNG)
+[[images](/1.PNG)
 **Le asignamos estas caracteristicas**
 * Direccion IP
 * Una mascara de red
