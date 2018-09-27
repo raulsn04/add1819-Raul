@@ -39,6 +39,7 @@ Accedemos al fichero **etc/hostname** y modificamos el nombre del host añadiend
 * Hostname -a
 * Hostname -f
 * Uname -a
+
 ![images](images/5.PNG)
 
 * IP a
