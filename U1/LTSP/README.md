@@ -53,7 +53,7 @@ creamos 3 nuevos usuarios en el sistema.
 ## Instalacion del servicio Openssh-server
 
 Para instalar el servicio **Openssh-server** ejecutamos el comando con privilegios de root; *sudo  apt-get install openssh-server*
-una vez comience la instalacion nos aparece una opción para poder continuar debemos poner *s*.
+una vez comience la instalacion nos aparece una opción para poder continuar debemos poner **s**.
 ![images](images/8.PNG)
 
 ![images](images/9.PNG)
