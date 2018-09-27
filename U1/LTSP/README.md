@@ -44,6 +44,7 @@ Accedemos al fichero **etc/hostname** y modificamos el nombre del host añadiend
 
 * IP a
 * Blkid
+
 ![images](images/6.PNG)
 
 ## *Creación de usuarios*
