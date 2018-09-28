@@ -80,7 +80,8 @@ creamos la imagen del sistema
 ![images](images/14.PNG)
 
 ![images](images/15.PNG)
-una vez finalizada la cracion de la imagen (tardó unas 2 horas y media aprox) consultamos la configuración del fichero /etc/ltsp/dhcpd.conf
+
+una vez finalizada la cracion de la imagen (tardó unas 2 horas y media aprox) consultamos la configuración del fichero **/etc/ltsp/dhcpd.conf**
 
 ![images](images/16.PNG)
 modificamos el valor range añadiendo las ip 192.168.67.**122** y 192.168.67.**222**
