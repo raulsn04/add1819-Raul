@@ -124,6 +124,12 @@ comprobamos el inicio de sesion.
 
 ![images](images/c7.PNG)
 
+Accedemos con el cliente dos y el usuario **suarez2** y grabamos el inicio de sesión.
+
+![images](images/c73.PNG)
+
+![images](images/c74.PNG)
+
 una vez iniciado el cliente vamos al servidor y comprobamos la salida de estos comandos.
 * who am i
 * who
@@ -134,6 +140,12 @@ una vez iniciado el cliente vamos al servidor y comprobamos la salida de estos c
 
 ## Personalizamos los clientes
 
-Vamos al servidor y entramos a la ruta **/opt/ltsp/i386/etc/** para modificar el  fichero lts.conf 
+Vamos al servidor y entramos a la ruta **/opt/ltsp/i386/etc/** para modificar el  fichero lts.conf.
 
 ![images](images/c9.PNG)
+
+Ejecutamos el comando ltsp-update-image, para actualizar la imagen y mostramos como funciona en el video.
+
+![images](images/c72.PNG)
+
+![images](images/c722.PNG)
