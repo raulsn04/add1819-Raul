@@ -54,14 +54,14 @@ creamos 3 nuevos usuarios en el sistema.
 
 ## *Instalacion del servicio Openssh-server*
 
-Para instalar el servicio **Openssh-server** ejecutamos el comando con privilegios de root; *sudo  apt-get install openssh-server*
+Para instalar el servicio **Openssh-server** ejecutamos el comando con privilegios de root; *sudo  apt-get install openssh-server*.
 una vez comience la instalacion nos aparece una opción para poder continuar debemos poner **s**.
 ![images](images/8.PNG)
 
 ![images](images/9.PNG)
 
 ## *Modificación del fichero SSH*
-Accedemos al fichero **sshd_config** y cambiamos el apartado authentication; permit root login a **yes**
+Accedemos al fichero **sshd_config** y cambiamos el apartado authentication; permit root login a **yes**.
 
 ![images](images/10.PNG)
 
@@ -69,26 +69,26 @@ Accedemos al fichero **sshd_config** y cambiamos el apartado authentication; per
 
 
 ## *Instalación del servicio LTSP*
-Ejecutamos el comando con permisos de root; *sudo apt-get install ltsp-server-standalone*
+Ejecutamos el comando con permisos de root; *sudo apt-get install ltsp-server-standalone*.
 
 ![images](images/12.PNG)
 
 ![images](images/13.PNG)
 ## *Creación de imagen*
-creamos la imagen del sistema
+creamos la imagen del sistema.
 
 ![images](images/14.PNG)
 
 ![images](images/15.PNG)
 
-una vez finalizada la cracion de la imagen (tardó unas 2 horas y media aprox) consultamos la configuración del fichero **/etc/ltsp/dhcpd.conf**
+una vez finalizada la cracion de la imagen (tardó unas 2 horas y media aprox) consultamos la configuración del fichero **/etc/ltsp/dhcpd.conf**.
 
 ![images](images/16.PNG)
-modificamos el valor range añadiendo las ip 192.168.67.**122** y 192.168.67.**222**
+modificamos el valor range añadiendo las ip 192.168.67.**122** y 192.168.67.**222**.
 
 ![images](images/17.PNG)
 
-reiniciamos el servidor y consultamos la configuración de **ps -ef|grep dhcp** y **ps -ef|grep ftp**
+reiniciamos el servidor y consultamos la configuración de **ps -ef|grep dhcp** y **ps -ef|grep ftp**.
 
 ![images](images/18.PNG)
 
@@ -107,7 +107,7 @@ Le añadimos una interfaz de red Interna
 
 ![images](images/c3.PNG)
 
-Le activamos el soporte 3D y le subimos la memoria grafia a 128Mb
+Le activamos el soporte 3D y le subimos la memoria grafia a 128Mb.
 
 ![images](images/c4.PNG)
 
@@ -116,10 +116,17 @@ Con el servidor iniciado, arrancamos el cliente.
 
 ![images](images/c5.PNG)
 
-accedemos con el usuario **suarez1**
+accedemos con el usuario **suarez1**.
 
 ![images](images/c6.PNG)
 
-comprobamos el inicio de sesion
+comprobamos el inicio de sesion.
 
 ![images](images/c7.PNG)
+
+una vez iniciado el cliente vamos al servidor y comprobamos la salida de estos comandos.
+* who am i
+* who
+* sudo arp
+* netstat -ntap | grep 192.168
+![images](images/c8.PNG)
