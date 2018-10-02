@@ -110,3 +110,16 @@ Le añadimos una interfaz de red Interna
 Le activamos el soporte 3D y le subimos la memoria grafia a 128Mb
 
 ![images](images/c4.PNG)
+
+# **Iniciamos sesion con el cliente**
+Con el servidor iniciado, arrancamos el cliente.  
+
+![images](images/c5.PNG)
+
+accedemos con el usuario **suarez1**
+
+![images](images/c6.PNG)
+
+comprobamos el inicio de sesion
+
+![images](images/c7.PNG)
