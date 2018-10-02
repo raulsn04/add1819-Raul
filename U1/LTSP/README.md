@@ -129,4 +129,11 @@ una vez iniciado el cliente vamos al servidor y comprobamos la salida de estos c
 * who
 * sudo arp
 * netstat -ntap | grep 192.168
+
 ![images](images/c8.PNG)
+
+## Personalizamos los clientes
+
+Vamos al servidor y entramos a la ruta **/opt/ltsp/i386/etc/** para modificar el  fichero lts.conf 
+
+![images](images/c9.PNG)
