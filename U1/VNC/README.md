@@ -139,6 +139,7 @@ Configurarmos las máquinas virtuales según lo indicado en el documento.
 Configuramos la ip del servidor y el nombre de host.
 
 ![](imagenes/30.PNG)
+
 Añadimos el dominio y la puerta de enlace.
 
 ![](imagenes/31.PNG)
@@ -152,6 +153,7 @@ Intento de conexion por el puerto 5901, pero aparecia la pantalla en negro, comp
 ![](imagenes/33.PNG)
 
 Ponemos la clave.
+
 ![](imagenes/34.PNG)
 
 Conexión establecida y comprobación de los puertos mediante el comando lsof -i -n|grep 590, los puertos están bien y a la escucha, pero aún asi se mostraban las pantallas en negro.
