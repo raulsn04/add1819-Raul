@@ -21,6 +21,7 @@ En el servidor VNC instalamos TightVNC Server.
 ![](imagenes/4.PNG)
 
 Configurarmos la instalación.
+
 ![](imagenes/5.PNG)
 
 Avanzamos en el proceso de instalación e instalamos.
