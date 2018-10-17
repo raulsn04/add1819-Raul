@@ -118,6 +118,10 @@ Instalamos el paquete VNC.
 Ejecutamos vncserver en el servidor para iniciar el servicio VNC y ponemos la clave para las conexiones vnc al escritorio.
 Al final nos muestra el numero de escritio remoto.
 
+vdir /home/nombrealumno/.vnc, vemos que se nos han creado unos ficheros de configuración VNC asociados a nuestro usuario.
+
+![](imagenes/24.0.PNG)
+
 Ejecutamos ps -ef|grep vnc para comprobar que los servicios relacionados con vnc están en ejecución.
 
 ![](imagenes/25.PNG)
@@ -162,6 +166,8 @@ Conexión establecida y comprobación de los puertos mediante el comando lsof -i
 ![](imagenes/35.PNG)
 
 La solución fue conectar por el puerto 5900 y ejecutar este comando **x0vncserver -display :0 -passwordfile /home/nombre-alumno/.vnc/passwd**  que se encuentra en el **paso 4**.
+
+![](imagenes/36.0.PNG)
 
 ![](imagenes/36.PNG)
 
