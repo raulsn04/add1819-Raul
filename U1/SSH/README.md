@@ -215,3 +215,109 @@ Ahora modificamos el servidor SSH para permitir la ejecución de aplicaciones gr
 Ahora nos vamos al *ssh-client22g* y ejecutamos el comando *zypper se geany* para comprobar que no esta instalado.
 
 ![](imagen/52.PNG)
+
+Ahora comprobamos en el cliente que *geany* funciona de forma remota desde el servidor, conectamos con el comando *ssh -X suarez1@ssh-serverXXg* y ejecutamos *geany*.
+
+![](imagen/53.PNG)
+
+![](imagen/54.PNG)
+
+
+## 7 Aplicaciones Windows nativas
+
+Instalamos el emulador *Wine* en el *ssh-server22g*
+
+![](imagen/60.PNG)
+
+Usando el Block de notas de *Wine*, notepad comprobamos el funcionamiento en el server22g.
+
+![](imagen/61.PNG)
+
+![](imagen/62.PNG)
+
+Usando el Block de notas de *Wine*, notepad comprobamos el funcionamiento en el client22g.
+
+![](imagen/63.PNG)
+
+![](imagen/64.PNG)
+
+
+## 8 Restricciones de uso
+
+### Restricción sobre un usuario
+
+Modificaremos los usuarios del servidor ssh para añadir una restricción al usuario *suarez2* para que nos deniege el permiso de acceso, para ello debemos acceder al fichero de configuración */etc/ssh/sshd_config* y añadimos la linea *DenyUsers* y el usuario al que queremos denegar el acceso.
+
+![](imagen/65.PNG)
+
+Comprobamos la restricción.
+
+![](imagen/66.PNG)
+
+### Restricción sobre una aplicación
+
+Vamos a crear una restricción de permisos sobre determinadas aplicaciones, para ello creamos el grupo **remoteapps** e incluimos al usuario *suarez4* en el grupo.
+
+![](imagen/67.PNG)
+
+Localizamos la ruta donde se encuentra el programa *Geany* y le ponemos al grupo *remoteapps* como propietario y le ponemos los permisos a *750* para que los ususarios que no pertenezcan al grupo no puedan ejecutar el programa.
+
+![](imagen/68.PNG)
+
+Comprobamos el funcionamiento en el servidor con el usuario *suarez1*.
+
+![](imagen/69.PNG)
+
+Comprobamos el funcionamiento en el cliente con el usuario *suarez1*.
+
+![](imagen/70.PNG)
+
+Comprobamos el funcionamiento en el servidor con el usuario **suarez4**.
+
+![](imagen/71.PNG)
+
+![](imagen/72.PNG)
+
+
+## 9 Servidor SSH en Windows
+
+Configuramos el servidor y le cambiamos el nombre del equipo a *ssh-server22s*
+
+![](imagen/72.PNG)
+
+Añadimos en C:\Windows\System32\drivers\etc\hosts el equipo ssh-client22g y ssh-client22w.
+
+![](imagen/80.PNG)
+
+Comprobamos haciendo ping a ambos equipos.
+
+![](imagen/81.PNG)
+
+Instalamos el servidor SSH, descargamos el zip de OpenSSH y lo descomprimimos en la ruta C:archivosdeprograma\OpenSSH.
+
+![](imagen/82.PNG)
+
+Iniciamos PowerShell como Administrador y nos movemos hasta C:\Program files\OpenSSH y ejecutamos el script para instalar los servicios *sshd* y *ssh-agent*.
+* Set-ExecutionPolicy –ExecutionPolicy Bypass
+* .\install-sshd.ps1
+
+![](imagen/90.PNG)
+
+Generamos las claves (certificados) del servidor.
+
+![](imagen/91.PNG)
+
+Habilitamos la regla de nombre SSH en el Firewall de Windows para permitir (Allow) conexiones TCP entrantes (Inbound) en el puerto 22 (SSH):
+* *New-NetFirewallRule -Protocol TCP -LocalPort 22 -Direction Inbound -Action Allow -DisplayName SSH*
+
+![](imagen/92.PNG)
+
+Comprobamos el acceso SSh desde los clientes.
+
+* netstat - n para Windows.
+
+![](imagen/94.PNG)
+
+* lsof -i -n para Linux.
+
+![](imagen/93.PNG)
