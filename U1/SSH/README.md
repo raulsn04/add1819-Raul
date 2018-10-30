@@ -28,7 +28,7 @@ Comprobamos los cambios ejecutando estos comandos:
 
 ![](imagen/5.PNG)
 
-Creamos los siguientes usuarios en ssh-serverXXg:
+Creamos los siguientes usuarios en ssh-server22g:
 
 ![](imagen/6.PNG)
 
@@ -91,7 +91,6 @@ sudo lsof -i:22 -n para comprobar que el servicio está escuchando por el puerto
 ## 2.2 Primera conexión SSH desde cliente GNU/Linux.
 
 Desde el cliente *ssh-client22g* hacemos un *ping* y *nmap -Pn ssh-server22g* al servidor para comprobar la conexión.
-#### HACER DE NUEVO Y PING
 
 ![](imagen/24.PNG)
 
@@ -177,10 +176,42 @@ Accedemos desde el cliente *ssh-client22g*
 
 ![](imagen/44.PNG)
 
-####HACERLA
-
 Accedemos desde el cliente *ssh-client22w*
 
 ![](imagen/45.PNG)
 
 ## 5 Autenticación mediante claves públicas
+
+Vamos a la máquina ssh-client22g y ejecutamos el comando *ssh-keygen -t rsa* para generar un nuevo par de claves para el usuario en */home/nombre-alumno/.ssh/id_rsa y
+/home/nombre-alumno/.ssh/id_rsa.pub*.
+
+![](imagen/46.PNG)
+
+Ahora copiamos la clave pública *id_rsa.pub* al fichero *authorized_keys* del usuario suarez1, usaremos el comando *ssh-copy-id*
+
+![](imagen/47.PNG)
+
+Comprobamos que accede desde el ssh-client22g y no pide contraseña.
+
+![](imagen/48.PNG)
+
+Comprobamos que accede desde el ssh-client22w y si pide contraseña.
+
+![](imagen/49.PNG)
+
+
+## 6 Uso de SSH como túnel para X
+
+Instalamos en el servidor una aplicación de entorno gráfico *Geany*  que no esté en los clientes.
+
+![](imagen/50.PNG)
+
+Ahora modificamos el servidor SSH para permitir la ejecución de aplicaciones gráficas, desde los clientes, para ello debemos consultar fichero de configuración */etc/ssh/sshd_config*  y poner la opción *X11Forwarding*  en **yes** y descomentarla.
+
+![](imagen/51.1.PNG)
+
+![](imagen/51.PNG)
+
+Ahora nos vamos al *ssh-client22g* y ejecutamos el comando *zypper se geany* para comprobar que no esta instalado.
+
+![](imagen/52.PNG)
