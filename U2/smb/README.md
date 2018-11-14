@@ -42,7 +42,7 @@ Crear el usuario smbguest.
 
 ### 1.3 Crear las carpetas para los futuros recursos compartidos
 
-Creamos las carpetas dentro del directorio srv/samba22
+Creamos las carpetas dentro del directorio srv/samba22.
 
 ![](imagen/7.PNG)
 
@@ -61,7 +61,7 @@ Vamos a Yast -> *Samba Server*, configuramos el Workgroup: *curso1819* (puse mar
 ![](imagen/10.PNG)
 
 En la pestaña de Inicio definimos, Iniciar el servicio durante el arranque de la máquina.
-Ajustes del cortafuegos -> Abrir puertos
+Ajustes del cortafuegos -> Abrir puertos.
 
 ![](imagen/11.PNG)
 
