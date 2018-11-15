@@ -50,7 +50,11 @@ Le damos los permisos y configuramos el grupo propietario de cada carpeta y que 
 
 ![](imagen/8.PNG)
 
-### 1.4 Configurar el servidor Samba
+**Actualizamos los permisos por una modificación del informe**
+
+![](imagen/8.1.PNG)
+
+### 1.4 Configurar el servidor Samba **CAPTURA AL GRUPO NUEVA**
 
 Hacemos una copia de seguridad del fichero de configuración existente cp /etc/samba/smb.conf /etc/samba/smb.conf.000.
 
@@ -89,6 +93,9 @@ Añadimos los usuarios a Samba, **smbpasswd -a nombreusuario** , para crear clav
 
 ![](imagen/15.PNG)
 
+![](imagen/15.1.PNG)
+
+
 pdbedit -L, para comprobar la lista de usuarios Samba.
 
 ![](imagen/16.PNG)
@@ -122,4 +129,83 @@ Configuramos el cliente Windows, usamos el nombre y la IP que hemos establecido 
 
 Configuramos el fichero ...\etc\hosts de Windows.
 
-![](imagen/21.PNG)
+![](imagen/21.1.PNG)
+
+### 2.1 Cliente Windows GUI
+
+Desde el cliente Windows accedemos a los recursos compartidos del servidor Samba.
+
+Ponemos ()\\ip-del-servidor-samba) en este caso \\172.19.22.31 y vemos que conecta y muestra los recursos.
+
+![](imagen/22.PNG)
+
+Accedemos al recurso compartido con el usuario invitado.
+* **net use para ver** las conexiones abiertas.
+
+* **net use * /d /y** para borrar todas las conexión SMB/CIFS que se han realizado.
+
+![](imagen/23.PNG)
+
+Accedemos al recurso compartido con el usuario soldado.
+
+![](imagen/27.PNG)
+
+* **net use** para ver las conexiones abiertas.
+* **net use * /d /y** para borrar todas las conexión SMB/CIFS que se hadn realizado.
+
+![](imagen/26.PNG)
+
+Accedemos al recurso compartido con el usuario pirata.
+
+![](imagen/24.PNG)
+
+**Vamos al servidor Samba.**
+
+* smbstatus, desde el servidor Samba.
+* lsof -i, desde el servidor Samba.
+
+![](imagen/29.PNG)
+
+### 2.2 Cliente Windows comandos
+
+**Abrimos una shell de windows.**
+* net use /?, para consultar la ayuda del comando.
+* net use, para consultar todas las conexiones/recursos conectados hacemos .
+
+Si hubiera alguna conexión abierta la cerramos y **net use** para comprobar que no hay conexiones establecidas.
+
+**net view (\\IP-SERVIDOR-SAMBA) \\172.19.22.31**, para ver los recursos de esta máquina.
+
+**net use S: (\\IP-SERVIDOR-SAMBA)\\172.19.22.31\recurso clave /USER:usuario /p:yes** crear una conexión con el recurso compartido y lo monta en la unidad S.
+Probamos a montar el recurso barco.
+
+![](imagen/30.PNG)
+
+* net use, para comprobar.
+
+![](imagen/31.PNG)
+
+Ahora podríamos entrar en la unidad S ("s:") y crear carpetas, etc.
+
+Comprobamos los resultados de estos comandos.
+* smbstatus, desde el servidor Samba.
+
+![](imagen/32.PNG)
+
+* lsof -i, desde el servidor Samba.
+
+![](imagen/33.PNG)
+
+
+## 3 Cliente GNU/Linux
+
+
+Configurar el cliente GNU/Linux.
+Usar nombre y la IP que hemos establecido al comienzo.
+Configurar el fichero /etc/hosts de la máquina.
+
+### 3.1 Cliente GNU/Linux GUI
+
+Accedemos al recurso del servidor Samba, pulsamos CTRL+L y escribimos (smb://IP-SERVIDOR-SAMBA) **smb://172.19.22.31**:
+
+![](imagen/40.PNG)
