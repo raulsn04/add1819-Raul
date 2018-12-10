@@ -1,4 +1,4 @@
-#Servidor de Impresión en Windows
+# Servidor de Impresión en Windows
 
 # Grupo: Raúl Suárez Noda & Darío Díaz Farrais.
 
