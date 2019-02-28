@@ -5,7 +5,7 @@
 #/C Copia sin detenerse aunque haya error en archivos.
 #/I Si el destino no existe, se crea un directorio.
 #variable para que detecte usuario  automaticamente.
-#arv help que muestre ayuda.
+#arvg help que muestre información.
 
 argument = ARGV[0].to_s
 
