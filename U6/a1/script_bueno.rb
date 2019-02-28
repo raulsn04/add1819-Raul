@@ -17,13 +17,14 @@ def ver_fin
   puts "Copia finalizada"
 end
 
-if argument != "help"
+if argument == "help"
   puts '''Copia de seguridad del usuario
 
 Realiza copias del directorio del usuario a nuestra
 unidad externa de memoria que conectemos
 
 '''
+exit
 end
 
 puts ver_titulo
